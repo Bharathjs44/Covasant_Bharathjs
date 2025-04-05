@@ -5,17 +5,17 @@ D2 = {'ok': 2, 'new':3 }
 D3= D1.copy()
 for key, value in D2.items():
     D3[key]=value
-print(D3)
+print(f"union :{D3}")
     
 #Intersection
-print({key:D1[key] for key in D1 if key in D2 })
+print('Intersection :', {key:D1[key] for key in D1 if key in D2 })
  
 #Set Difference
 difference={}
 for key in D1:
     if key not in D2:
         difference[key]=D1[key]
-print(difference)    
+print(f"Difference :{difference}")    
 
 #merge
 merge={}
@@ -26,5 +26,5 @@ for key in D2:
         merge[key]+= D2[key]
     else:
         merge[key]=D2[key]
-print(merge)
+print(f"merge :{merge}")
         
