@@ -2,9 +2,7 @@
 Given a directory, find out the file Name 
 having max size recursively 
 
-Question-4:
-Recursively go below a dir and based on filter, dump those files in to  single file 
-(work with only text file)'''
+'''
 #######################Day2-Assignment###############################
 # program-3
 
@@ -24,5 +22,24 @@ for root, dirs, files in os.walk(directory):
   
 print(f"File Name:{largest_file}")
 print(f"size of the file :{max_size} bytes")
-  
+
+
+
+########################
+
+"""Question-4:
+    
+Recursively go below a dir and based on filter, dump those files into single file 
+(work with only text file)"""
+
+def get_files(directory):
+    with open('file_names.txt',"wt") as f:
+        for item in os.listdir(directory):
+            item = directory+'\\'+item
+            if os.path.isdir(item):
+                get_files(item)
+            elif '.txt' in item:
+                f.writelines(item+'\n')
+                
+get_files(directory)
 
