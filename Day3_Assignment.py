@@ -2,17 +2,21 @@
 
 #Q- flatten lists
 
+flatlist=[]
+
 def flatten(mylist):
-    flatlist=[]
     for item in mylist:
-        if isinstance(item, list):
-            flatlist.extend(flatten(item))
+        if type(item) is list:
+            flatten(item)
         else:
             flatlist.append(item)
     return flatlist
     
 list1= [1,2,3, [1,2,3,[3,4],2]]
 print("flattend list is: ",flatten(list1))
+
+
+#output: flattend list is:  [1, 2, 3, 1, 2, 3, 3, 4, 2]
 
 #######################################################################################
 
@@ -24,17 +28,20 @@ output = [[[[0,1,2],[3,4,5]],[[5,6,7],[9,4,2]]]]'''
 
 data= [[[ '(0,1,2)' , '(3,4,5)'], ['(5,6,7)' , '(9,4,2)']]]
 
-converted =[]
-for outer in data:
-    outer_list =[]
-    for inner in outer:
-        inner_list=[]
-        for item in inner:
-            numbers=list(map(int,item.strip('()').split(',')))
-            inner_list.append(numbers)
-        outer_list.append(inner_list)
-    converted.append(outer_list)
+def convert_to_list(data):
+    conv_list =[]
+    for item in data:
+        if type(item) is list:
+            conv_list.append(convert_to_list(item))
+        elif type(item) is str:
+            lis = item.strip('()').split(',')
+            x=[]
+            for i in lis:
+              x.append(int(i))
+            conv_list.append(x)  
+              
+    return conv_list
  
-print("Converted list is:",converted) 
+print("Converted list is:",convert_to_list(data)) 
     
     
