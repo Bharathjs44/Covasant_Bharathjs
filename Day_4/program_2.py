@@ -40,5 +40,4 @@ print(fs.get_Latest_Files(date(2025,4,11)))
 
 #output: ['C:\\Users\\Bharath\\Desktop\\Handson\\Day6\\quick_server.py', 
           'C:\\Users\\Bharath\\Desktop\\Handson\\Day7\\exercise.py',  
-          'C:\\Users\\Bharath\\Desktop\\Handson\\Day7\\quick_server.py', 
-          'C:\\Users\\Bharath\\Desktop\\Handson\\Day7\\static\\favicon.ico',]
+          'C:\\Users\\Bharath\\Desktop\\Handson\\Day7\\quick_server.py',]
