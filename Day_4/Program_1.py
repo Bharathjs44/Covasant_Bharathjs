@@ -15,7 +15,7 @@ class Poly:
         i,j =len(self.data),len(differ.data)
         if i < j:
             self.data = [0]*(j-i)+self.data
-        else:
+        else
             differ.data = [0]*(i-j)+differ.data
         res=[]  
         for i,j in zip(self.data,differ.data):
@@ -27,11 +27,14 @@ class Poly:
         return f"Poly({','.join(map(str,self.data))})"
             
     
-if __name__ == '__main__':
-    a = Poly(1,2,4,2,3,2)
-    b = Poly(1,0,1,2)
-    c = a + b
-    print(c)
+
+
+
+# if __name__ == '__main__':
+    # a = Poly(1,2,4,2,3,2)
+    # b = Poly(1,0,1,2)
+    # c = a + b
+    # print(c)
         
         
 #output: Poly(1,2,5,2,4,4)    
