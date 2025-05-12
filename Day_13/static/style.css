@@ -81,11 +81,11 @@
   }
   
   .sidebar-btn {
-    background-color: #3f51b5;
+    background-color: black;
     color: white;
     padding: 10px;
     margin-bottom: 15px;
-    border-radius: 6px;
+    border-radius: 25px;
     text-align: center;
     text-decoration: none;
     display: block;
@@ -99,7 +99,7 @@
   }
   
   body.light .sidebar-btn {
-    background-color: #1976d2;
+    background-color: black;
   }
   
   .bottom-actions {
